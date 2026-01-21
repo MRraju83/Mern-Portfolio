@@ -55,7 +55,7 @@
 
 .btn-pink{
     background-color: tomato;
-    color: white;
+    color: #fff;
     padding: 0.8rem 2.3rem;
     box-shadow: 5px 5px 7px 0px #0000003f;
     font-size: 18px;
@@ -65,6 +65,7 @@
     border: solid 3px transparent;
     position: relative;
     border-radius: 5px;
+    z-index: 1;
     
 }
 .btn-pink::before{
@@ -78,6 +79,7 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: all 0.8s;
+    z-index: -1;
 }
 .btn-pink:hover::before{
     transform: scaleX(1);
