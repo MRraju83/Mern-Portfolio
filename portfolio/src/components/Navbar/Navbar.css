@@ -1,0 +1,91 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 180px;
+  box-shadow: 0 10px 25px rgba(11, 22, 27, 0.4);
+  background-color: aliceblue;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+
+.logo img {
+  margin-top: -10px;
+  width: 95px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.logo h3 {
+  font-size: 25px;
+  font-weight: 1000;
+  color:red;
+  position: absolute;
+  margin: 30px;
+}
+
+.logo h3 span{
+  font-size: 20px;
+}
+
+
+.navbar ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar ul a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.navbar ul a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+.navbar ul a:hover::after {
+  width: 100%;
+}
+
+.navbar ul a:hover {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1px;
+    
+  }
+}
